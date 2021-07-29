@@ -44,23 +44,34 @@ In order to answer this business question, I will use the data analysis process:
 ## PROCESS
 
 #### Microsoft Excel
-
-* Microsoft Excel was used to import and transform each dataset individually. 
+ 
 * Each dataset was transformed where new columns were added based on using formulas on the original data 
-* Includes the ride length, ride month, day of the week, time of the day, and ride hour.
+* Includes the ride length, ride month, day of the week, time of the day, and ride hour
+
+***Insert screenshot of columns + formulas***
 
 #### PgAdminV5 (PostgreSQL)
 
-* Since the data files contain thousands of rows and take up a substantial amount of memory, I used PgAdmin v5 via PostgreSQL to inspect, clean, and merge the data for analysis.
-* For each dataset, a table was made based on the appropriate data type for each column and the corresponding .csv file was imported.
+* Since the data files contain thousands of rows and take up a substantial amount of memory, I used PgAdmin v5 via PostgreSQL to inspect, clean, and merge the data for analysis
+* For each dataset, a table was made based on the appropriate data type for each column and the corresponding .csv file was imported
+
+***Insert screenshot of table creation query, import CSV, head()***
 * Once all tables were made, they were merged into a new table using the UNION statement
+
+***Insert union query screenshot***
 
 #### Data Cleaning
 
 * Check for duplicates
+
+***Insert SQL query***
 * Identify null values 
+
+***Insert SQL query***
 * Drop inaccurate rows (negative/outliers)
   * Ride Length > 0
+
+ ***Insert SQL query***
 
 ## ANALYZE
 
@@ -72,15 +83,21 @@ In order to answer this business question, I will use the data analysis process:
 * Find IQR (1Q, 3Q - 1.5*IQR) for Ride Length to find outliers
 * Top start/end stations
 
+***Insert SQL query***
 ## SHARE
 
 #### Data Visualization - Tableau
 
 * Member vs Casual:
   * Total Ride Count: overall, month to month, weekday, time of day, and ride hour, rider type
+
+***Insert Dashboard link***
   * Avg Ride length: overall, month to month, weekday, time of day, and ride hour
+
+***Insert Dashboard link***
   * Top five stations count by member_casual
 
+***Insert Dashboard link***
 ## ACT
 
 #### Conclusion
@@ -93,6 +110,7 @@ In order to answer this business question, I will use the data analysis process:
   * stations used
   * bike type
   * ride duration
+ 
 * Top 3 recommendations:
   * Marketing strategies with discounts at casual trends (weekdays to increase, summer capitalize, work hours vs evenings/late night)
   * Exclusive access to high usage casual bikes (classic vs. docked/electric bikes)
