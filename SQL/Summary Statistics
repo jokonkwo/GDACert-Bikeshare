@@ -6,36 +6,36 @@ PostgreSQL using PgAdmin 4 v5
 
 SELECT 'count' as summary_statistics,
     count(*) as rd_stats
-FROM trip_all
+FROM trip_all_final
 UNION
 SELECT 'total',
     sum(ride_duration)
-FROM trip_all
+FROM trip_all_final
 UNION
 SELECT 'mean',
     avg(ride_duration)
-FROM trip_all
+FROM trip_all_final
 UNION
 SELECT 'std_dev',
     stddev(ride_duration)
-FROM trip_all
+FROM trip_all_final
 UNION
 SELECT 'min',
     min(ride_duration)
-FROM trip_all
+FROM trip_all_final
 UNION
 SELECT 'Q1',
     PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY ride_duration)
-FROM trip_all
+FROM trip_all_final
 UNION
 SELECT 'median',
     PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY ride_duration)
-FROM trip_all
+FROM trip_all_final
 UNION
 SELECT 'Q3',
     PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY ride_duration)
-FROM trip_all
+FROM trip_all_final
 UNION
 SELECT 'max',
     max(ride_duration)
-FROM trip_all
+FROM trip_all_final
