@@ -51,27 +51,20 @@ In order to answer this business question, I will use the data analysis process:
 ***Insert screenshot of columns + formulas***
 
 #### PgAdminV5 (PostgreSQL)
+See Link for SQL Queries: https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/SQL/Used%20Queries
 
 * Since the data files contain thousands of rows and take up a substantial amount of memory, I used PgAdmin v5 via PostgreSQL to inspect, clean, and merge the data for analysis
-* For each dataset, a table was made based on the appropriate data type for each column and the corresponding .csv file was imported
+* For each dataset, a table was made based on the appropriate data type for each column and the corresponding .csv file was imported (Link)
 
-***Insert screenshot of table creation query, import CSV, head()***
-* Once all tables were made, they were merged into a new table using the UNION statement
-
-***Insert union query screenshot***
+* Once all tables were made, they were merged into a new table using the UNION statement (Link)
 
 #### Data Cleaning
 
 * Check for duplicates
-
-***Insert SQL query***
 * Identify null values 
-
-***Insert SQL query***
 * Drop inaccurate rows (negative/outliers)
   * Ride Length > 0
-
- ***Insert SQL query***
+(Link)
 
 ## ANALYZE
 
@@ -82,8 +75,7 @@ In order to answer this business question, I will use the data analysis process:
 * Ride_Count
 * Find IQR (1Q, 3Q - 1.5*IQR) for Ride Length to find outliers
 * Top start/end stations
-
-***Insert SQL query***
+(Link)
 ## SHARE
 
 #### Data Visualization - Tableau
