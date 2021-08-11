@@ -1,0 +1,41 @@
+PostgreSQL using PgAdmin 4 v5
+
+### Summary Statistics
+
+-- Ride_Duration: count, total, mean, std_dev, min, Q1, median, Q3, max
+
+SELECT 'count' as summary_statistics,
+    count(*) as rd_stats
+FROM trip_all
+UNION
+SELECT 'total',
+    sum(ride_duration)
+FROM trip_all
+UNION
+SELECT 'mean',
+    avg(ride_duration)
+FROM trip_all
+UNION
+SELECT 'std_dev',
+    stddev(ride_duration)
+FROM trip_all
+UNION
+SELECT 'min',
+    min(ride_duration)
+FROM trip_all
+UNION
+SELECT 'Q1',
+    PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY ride_duration)
+FROM trip_all
+UNION
+SELECT 'median',
+    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY ride_duration)
+FROM trip_all
+UNION
+SELECT 'Q3',
+    PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY ride_duration)
+FROM trip_all
+UNION
+SELECT 'max',
+    max(ride_duration)
+FROM trip_all
