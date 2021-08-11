@@ -1,0 +1,26 @@
+PostgreSQL using PgAdmin 4 v5
+
+### Create Table for Importing Data
+
+-- Import each dataset from CSV file
+
+CREATE TABLE trip_2020_05(
+  ride_id varchar(45),
+	rideable_type varchar(45),
+	started_at timestamp,
+	ended_at timestamp,
+	start_station_name varchar(100),
+	start_station_id varchar(100),
+	end_station_name varchar(100),
+	end_station_id varchar(100),
+	start_lat float4,
+	start_lng float4,
+	end_lat float4,
+	end_lng float4,
+	member_casual varchar(45),
+	ride_duration int8,
+	ride_month int8,
+	ride_weekday int8,
+	ride_hour int8,
+	time_of_day varchar(45)
+)
