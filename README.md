@@ -51,29 +51,28 @@ In order to answer this business question, I will use the data analysis process:
 ***Insert screenshot of columns + formulas***
 
 #### PgAdminV5 (PostgreSQL)
-See Link for SQL Queries: https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/SQL/Used%20Queries
 
 * Since the data files contain thousands of rows and take up a substantial amount of memory, I used PgAdmin v5 via PostgreSQL to inspect, clean, and merge the data for analysis
-* For each dataset, a table was made based on the appropriate data type for each column and the corresponding .csv file was imported (Link)
 
-* Once all tables were made, they were merged into a new table using the UNION statement (Link)
+* For each dataset, a table was made based on the appropriate data type for each column and the corresponding .csv file was imported [See SQL Query](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/SQL/Create%20Table%20Query)
+
+* Once all tables were made, they were merged into a new table using the UNION statement [See SQL Query](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/SQL/Table%20Union%20Query)
 
 #### Data Cleaning
 
-* Check for duplicates
-* Identify null values 
-* Drop inaccurate rows (negative/outliers)
-  * Ride Length > 0
-(Link)
+* Check for duplicates [See SQL Query](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/SQL/Data%20Cleaning%20-%20Duplicates)
+* Check for null values [See SQL Query](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/SQL/Data%20Cleaning%20-%20Null%20Values)
+* Check for negative values [See SQL Query](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/SQL/Data%20Cleaning%20-%20Negative%20Values)
+* Check for outliers (IQR Method) [See SQL Query](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/SQL/Data%20Cleaning%20-%20IQR%20Outliers)
 
 ## ANALYZE
 
 #### Descriptive analysis
 
+* Summary Statistics: Ride_Duration [See SQL Query](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/SQL/Summary%20Statistics) 
+
 * Groupby: Member_Casual, Day of Week, Time of Day, Ride_Hour
-* Ride_Length: SUM, MEAN, MIN, MAX, MEDIAN, MODE
 * Ride_Count
-* Find IQR (1Q, 3Q - 1.5*IQR) for Ride Length to find outliers
 * Top start/end stations
 (Link)
 ## SHARE
