@@ -1,0 +1,38 @@
+SQL Analysis - Ride Duration
+(AVG Ride Duration (mins) for each feature by Member_Casual)
+
+----------- Ride Duration by Member_Casual
+
+SELECT member_casual, avg(ride_duration)/60 as rd_avg
+FROM trip_all_final
+GROUP BY member_casual
+
+----------- Ride Duration by Rideable_Type | Member_Casual
+
+SELECT member_casual, rideable_type, avg(ride_duration)/60 as rd_avg
+FROM trip_all_final
+GROUP BY member_casual, rideable_type
+
+----------- Ride Duration by Time_of_Week | Member_Casual
+
+SELECT member_casual, time_of_day, avg(ride_duration)/60 as rd_avg
+FROM trip_all_final
+GROUP BY member_casual, time_of_day
+
+----------- Ride Duration by Ride_Weekday | Member_Casual
+
+SELECT member_casual, ride_weekday, avg(ride_duration)/60 as rd_avg
+FROM trip_all_final
+GROUP BY member_casual, ride_weekday
+
+----------- Ride Duration by Ride_Month | Member_Casual
+
+SELECT member_casual, ride_month, avg(ride_duration)/60 as rd_avg
+FROM trip_all_final
+GROUP BY member_casual, ride_month
+
+----------- Ride Duration by Ride_Hour | Member_Casual
+
+SELECT member_casual, ride_hour, avg(ride_duration)/60 as rd_avg
+FROM trip_all_final
+GROUP BY member_casual, ride_hour
