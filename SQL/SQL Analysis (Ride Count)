@@ -1,5 +1,6 @@
 SQL Analysis - Ride Count 
 (Ride Count/Percentage for each feature by Member_Casual)
+
 ----------- Ride Count by Member_Casual
 
 WITH mt as
