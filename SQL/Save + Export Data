@@ -1,9 +1,0 @@
-PostgreSQL using PgAdmin 4 v5
-
-# Save/Export Clean Data for Analysis
-
-COPY(
-	SELECT *
-	FROM trip_all_final
-	ORDER BY started_at asc)
-TO 'E:\Data Sets\Cyclistic Bike Share\Data\trip_all_final' DELIMITER ',' CSV HEADER;
