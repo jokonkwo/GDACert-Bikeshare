@@ -1,0 +1,114 @@
+SQL Analysis - Ride Count 
+(Ride Count/Percentage for each feature by Member_Casual)
+----------- Ride Count by Member_Casual
+
+WITH mt as
+	( SELECT member_casual, count(*) as ride_total
+	 FROM trip_all_final
+	 GROUP BY member_casual
+	),
+	
+t as 
+   ( SELECT sum(mt.ride_total) as total
+	 FROM mt)
+	 
+SELECT 
+	member_casual,
+	mt.ride_total, 
+	ROUND(mt.ride_total / t.total, 3) as percentage
+FROM mt, t
+
+----------- Ride Count by Rideable_Type | Member_Casual
+
+WITH rt as
+	( SELECT member_casual, rideable_type, count(*) as ride_count
+	 FROM trip_all_final
+	 GROUP BY member_casual, rideable_type
+	),
+	
+t as 
+   ( SELECT sum(rt.ride_count) as total
+	 FROM rt)
+	 
+SELECT 
+	member_casual,
+	rideable_type,
+	rt.ride_count, 
+	ROUND(rt.ride_count / t.total, 3) as percentage
+FROM rt, t
+
+----------- Ride Count by Time_of_Day | Member_Casual
+
+WITH rt as
+	( SELECT member_casual, time_of_day, count(*) as ride_count
+	 FROM trip_all_final
+	 GROUP BY member_casual, time_of_day
+	),
+	
+t as 
+   ( SELECT sum(rt.ride_count) as total
+	 FROM rt)
+	 
+SELECT 
+	member_casual,
+	time_of_day,
+	rt.ride_count, 
+	ROUND(rt.ride_count / t.total, 3) as percentage
+FROM rt, t
+
+----------- Ride Count by Ride_Weekday | Member_Casual
+
+WITH rt as
+	( SELECT member_casual, ride_weekday, count(*) as ride_count
+	 FROM trip_all_final
+	 GROUP BY member_casual, ride_weekday
+	),
+	
+t as 
+   ( SELECT sum(rt.ride_count) as total
+	 FROM rt)
+	 
+SELECT 
+	member_casual,
+	ride_weekday,
+	rt.ride_count, 
+	ROUND(rt.ride_count / t.total, 3) as percentage
+FROM rt, t
+
+----------- Ride Count by Ride_Hour | Member_Casual
+
+WITH rt as
+	( SELECT member_casual, ride_hour, count(*) as ride_count
+	 FROM trip_all_final
+	 GROUP BY member_casual, ride_hour
+	),
+	
+t as 
+   ( SELECT sum(rt.ride_count) as total
+	 FROM rt)
+	 
+SELECT 
+	member_casual,
+	ride_hour,
+	rt.ride_count, 
+	ROUND(rt.ride_count / t.total, 4) as percentage
+FROM rt, t
+
+----------- Ride Count by Ride_Month | Member_Casual
+
+WITH rt as
+	( SELECT member_casual, ride_month, count(*) as ride_count
+	 FROM trip_all_final
+	 GROUP BY member_casual, ride_month
+	),
+	
+t as 
+   ( SELECT sum(rt.ride_count) as total
+	 FROM rt)
+	 
+SELECT 
+	member_casual,
+	ride_month,
+	rt.ride_count, 
+	ROUND(rt.ride_count / t.total, 3) as percentage
+FROM rt, t
