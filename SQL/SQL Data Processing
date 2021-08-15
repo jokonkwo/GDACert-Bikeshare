@@ -1,0 +1,78 @@
+PostgreSQL using PgAdmin 4 v5
+
+### Create Table for Importing Data
+
+-- Import each dataset from CSV file
+
+CREATE TABLE trip_2020_05(
+  ride_id varchar(45),
+	rideable_type varchar(45),
+	started_at timestamp,
+	ended_at timestamp,
+	start_station_name varchar(100),
+	start_station_id varchar(100),
+	end_station_name varchar(100),
+	end_station_id varchar(100),
+	start_lat float4,
+	start_lng float4,
+	end_lat float4,
+	end_lng float4,
+	member_casual varchar(45),
+	ride_duration int8,
+	ride_month int8,
+	ride_weekday int8,
+	ride_hour int8,
+	time_of_day varchar(45)
+)
+
+PostgreSQL using PgAdmin 4 v5
+
+### Data Aggregation
+
+-- Once all tables having been created/imported, combine using UNION ALL
+
+CREATE TABLE trip_all as
+	((SELECT *
+FROM trip_2020_05
+UNION ALL
+SELECT *
+FROM trip_2020_06
+UNION ALL
+SELECT *
+FROM trip_2020_07
+UNION ALL
+SELECT *
+FROM trip_2020_08
+UNION ALL
+SELECT *
+FROM trip_2020_09
+UNION ALL
+SELECT *
+FROM trip_2020_10
+UNION ALL
+SELECT *
+FROM trip_2020_11
+UNION ALL
+SELECT *
+FROM trip_2020_12
+UNION ALL
+SELECT *
+FROM trip_2021_01
+UNION ALL
+SELECT *
+FROM trip_2021_02
+UNION ALL
+SELECT *
+FROM trip_2021_03
+UNION ALL
+SELECT *
+FROM trip_2021_04)
+order by started_at desc)
+
+# Save/Export Clean Data for Analysis
+
+COPY(
+	SELECT *
+	FROM trip_all
+	ORDER BY started_at asc)
+TO 'E:\Data Sets\Cyclistic Bike Share\Data\trip_all' DELIMITER ',' CSV HEADER;
