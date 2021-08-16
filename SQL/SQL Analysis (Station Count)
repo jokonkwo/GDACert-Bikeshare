@@ -1,0 +1,44 @@
+SQL Analysis - Station Count
+(Ride count per Station)
+
+----------- Top 10 Start Stations (Overall)
+
+SELECT start_station_name, count(start_station_name) as ride_count
+FROM trip_all_final
+WHERE start_station_name IS NOT NULL
+GROUP BY 1
+ORDER BY 2 desc
+LIMIT 10
+
+----------- Top 10 Start Stations (Member/Casual)
+
+SELECT member_casual,
+	   start_station_name,
+	   ROW_NUMBER() OVER (PARTITION BY member_casual order by member_casual, count(start_station_name ) desc) as ranking,
+	   count(start_station_name) as ride_count
+FROM trip_all_final
+WHERE start_station_name IS NOT NULL
+GROUP BY 1,2
+ORDER BY 3 asc, 1 desc
+LIMIT 20
+
+----------- Top 10 End Stations (Overall)
+
+SELECT end_station_name, count(end_station_name) as ride_count
+FROM trip_all_final
+WHERE end_station_name IS NOT NULL
+GROUP BY 1
+ORDER BY 2 desc
+LIMIT 10
+
+----------- Top 10 End Stations (Member/Casual)
+
+SELECT member_casual,
+	   end_station_name,
+	   ROW_NUMBER() OVER (PARTITION BY member_casual order by member_casual, count(end_station_name) desc) as ranking,
+	   count(end_station_name) as ride_count
+FROM trip_all_final
+WHERE end_station_name IS NOT NULL
+GROUP BY 1,2
+ORDER BY 3 asc, 1 desc
+LIMIT 20
