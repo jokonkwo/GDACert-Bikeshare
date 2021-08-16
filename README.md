@@ -45,10 +45,8 @@ In order to answer this business question, I will use the data analysis process:
 
 #### Microsoft Excel
  
-* Each dataset was transformed where new columns were added based on using formulas on the original data 
-* Includes the ride length, ride month, day of the week, time of the day, and ride hour
-[See formulas](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/Excel/Data%20Transformation%20(Formulas))
-[See screenshot](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/Excel/Picture%20of%20Columns%20Excel%201.JPG)
+* Each dataset was transformed where new columns were added based on using formulas on the original data [See formulas](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/Excel/Data%20Transformation%20(Formulas))
+* Includes the ride length, ride month, day of the week, time of the day, and ride hour [See screenshot](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/Excel/Picture%20of%20Columns%20Excel%201.JPG)
 
 #### PgAdminV5 (PostgreSQL)
 
@@ -57,6 +55,7 @@ In order to answer this business question, I will use the data analysis process:
 * For each dataset, a table was made based on the appropriate data type for each column and the corresponding .csv file was imported 
 
 * Once all tables were made, they were merged into a new table using the UNION statement
+
 [See SQL Query](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/SQL/SQL%20Data%20Processing)
 
 #### Data Cleaning
@@ -82,29 +81,32 @@ In order to answer this business question, I will use the data analysis process:
 #### Data Visualization - Tableau
 
 * Member vs Casual:
-  * Total Ride Count: overall, month to month, weekday, time of day, and ride hour, rider type
+* * Ride Count: overall, bike type, weekday, time of day, month to month, and ride hour
+* * Ride Duration: overall, bike type, weekday, time of day, month to month, and ride hour
 
-***Insert Dashboard link***
-  * Avg Ride length: overall, month to month, weekday, time of day, and ride hour
+* Top stations count by member_casual
+* * Start stations
+* * End stations
 
-***Insert Dashboard link***
-  * Top five stations count by member_casual
+[See Data Visualizations](https://public.tableau.com/app/profile/justin.okonkwo/viz/GDA-CyclisticDataVisualization/CyclisticBikeShare-Analysis)
 
-***Insert Dashboard link***
 ## ACT
 
 #### Conclusion
 
 * Difference between member and casual customer trends:
+  * bike type
   * time of year (Winter vs Summer)
   * day of the week (weekdays vs weekends)
   * ride hour (8AM, 5PM spikes)
   * time of the day
   * stations used
-  * bike type
   * ride duration
- 
-* Top 3 recommendations:
-  * Marketing strategies with discounts at casual trends (weekdays to increase, summer capitalize, work hours vs evenings/late night)
-  * Exclusive access to high usage casual bikes (classic vs. docked/electric bikes)
-  * Station location/nearby business deals (start + end) for members could work as strategies for subscription conversion
+
+#### Recommendations
+
+* Marketing strategies/discounts towards casual trends (membership perks)
+* * Weekends, Summer, Late Night (10PM – 2AM) discounts
+* * Discounts towards longer ride duration (majority of casual riders)
+* * Exclusive or easier access to the popular ‘Docked Bike’ vs. rest
+* * Discounts/promotions related to station location/nearby business deals for members could work as strategies for subscription conversion
