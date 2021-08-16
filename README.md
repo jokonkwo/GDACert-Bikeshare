@@ -95,13 +95,13 @@ In order to answer this business question, I will use the data analysis process:
 #### Conclusion
 
 * Difference between member and casual customer trends:
-  * bike type
-  * time of year (Winter vs Summer)
+  * bike type (high usage for Docked Bike)
+  * time of year (Summer vs Winter)
   * day of the week (weekdays vs weekends)
-  * ride hour (8AM, 5PM spikes)
-  * time of the day
-  * stations used
-  * ride duration
+  * ride hour (Traffic hours, 4PM - 6PM spikes)
+  * time of the day (Afternoon, Evenings > Mornings, Late Night)
+  * ride duration (Casual > Member)
+  * top stations used
 
 #### Recommendations
 
