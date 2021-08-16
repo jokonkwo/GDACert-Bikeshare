@@ -81,12 +81,12 @@ In order to answer this business question, I will use the data analysis process:
 #### Data Visualization - Tableau
 
 * Member vs Casual:
-* * Ride Count: overall, bike type, weekday, time of day, month to month, and ride hour
-* * Ride Duration: overall, bike type, weekday, time of day, month to month, and ride hour
+  * Ride Count: overall, bike type, weekday, time of day, month to month, and ride hour
+  * Ride Duration: overall, bike type, weekday, time of day, month to month, and ride hour
 
 * Top stations count by member_casual
-* * Start stations
-* * End stations
+  * Start stations
+  * End stations
 
 [See Data Visualizations](https://public.tableau.com/app/profile/justin.okonkwo/viz/GDA-CyclisticDataVisualization/CyclisticBikeShare-Analysis)
 
@@ -106,7 +106,7 @@ In order to answer this business question, I will use the data analysis process:
 #### Recommendations
 
 * Marketing strategies/discounts towards casual trends (membership perks)
-* * Weekends, Summer, Late Night (10PM – 2AM) discounts
-* * Discounts towards longer ride duration (majority of casual riders)
-* * Exclusive or easier access to the popular ‘Docked Bike’ vs. rest
-* * Discounts/promotions related to station location/nearby business deals for members could work as strategies for subscription conversion
+  * Weekends, Summer, Late Night (10PM – 2AM) discounts
+  * Discounts towards longer ride duration (majority of casual riders)
+  * Exclusive or easier access to the popular ‘Docked Bike’ vs. rest
+  * Discounts/promotions related to station location/nearby business deals for members could work as strategies for subscription conversion
