@@ -1,0 +1,11 @@
+Excel Formulas:
+
+ride_duration = ROUND((D2-C2)*86400, 0)
+
+ride_month = MONTH(C2)
+
+ride_weekday = WEEKDAY(C2,2)
+
+ride_hour = HOUR(C2)
+
+time_of_day = IF(AND(HOUR(C2) >= 6, HOUR(C2) < 12), "Morning", IF(AND(HOUR(C2) >= 12, HOUR(C2) < 17)
