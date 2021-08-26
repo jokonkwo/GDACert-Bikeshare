@@ -13,6 +13,7 @@ From these insights, your team will design a new marketing strategy to convert c
 In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet of 5,824 bicycles that are geo-tracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime.
 
 In order to answer this business question, I will use the data analysis process: 
+
 **Ask, Prepare, Process, Analyze, Share, and Act**
 
 ## ASK
@@ -46,8 +47,10 @@ In order to answer this business question, I will use the data analysis process:
 #### Microsoft Excel
  
 * Each dataset was transformed where new columns were added based on using formulas on the original data 
+
 [See formulas](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/Excel/Data%20Transformation%20(Formulas))
 * Includes the ride length, ride month, day of the week, time of the day, and ride hour
+
 [See screenshot](https://github.com/jokonkwo/GDACert-Bikeshare/blob/main/Excel/Picture%20of%20Columns%20Excel%201.JPG)
 
 #### PgAdminV5 (PostgreSQL)
